@@ -1,0 +1,1397 @@
+
+  <!DOCTYPE html>
+  <html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasiraHub - جایی برای رشد، آگاهی و موفقیت</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-green: #1e7e5f;
+        --light-green: #2d9e7f;
+        --dark-blue: #1a3a52;
+        --light-blue: #2d5a8c;
+        --gold: #d4a574;
+        --light-gold: #e8c4a0;
+        --white: #ffffff;
+        --light-gray: #f5f5f5;
+        --dark-gray: #333333;
+        --text-gray: #666666;
+      }
+
+      body {
+        font-family: 'Vazirmatn', 'IRANSans', 'Sahel', sans-serif;
+        color: var(--dark-gray);
+        line-height: 1.6;
+        background-color: var(--white);
+        overflow-x: hidden;
+      }
+
+      /* WhatsApp Float Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 999;
+        box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+        transition: all 0.3s ease;
+        animation: pulse-whatsapp 2s infinite;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.15);
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+      }
+
+      .whatsapp-float i {
+        color: var(--white);
+        font-size: 1.8rem;
+      }
+
+      @keyframes pulse-whatsapp {
+        0%, 100% { box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); }
+        50% { box-shadow: 0 5px 30px rgba(37, 211, 102, 0.7); }
+      }
+
+      /* Header & Navigation */
+      header {
+        background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-blue) 100%);
+        color: var(--white);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo i {
+        color: var(--gold);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--white);
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 0.95rem;
+      }
+
+      .nav-links a:hover {
+        color: var(--gold);
+      }
+
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-blue) 100%);
+        color: var(--white);
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        animation: slideInDown 0.8s ease;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+        animation: slideInUp 0.8s ease 0.2s both;
+      }
+
+      @keyframes slideInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: slideInUp 0.8s ease 0.4s both;
+      }
+
+      .btn {
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-family: 'Vazirmatn', sans-serif;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background-color: var(--gold);
+        color: var(--dark-blue);
+        font-weight: bold;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--light-gold);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3);
+      }
+
+      .btn-secondary {
+        background-color: var(--white);
+        color: var(--primary-green);
+        font-weight: bold;
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--light-gray);
+        transform: translateY(-2px);
+      }
+
+      /* Sections */
+      section {
+        padding: 60px 20px;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+        color: var(--primary-green);
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      .section-title::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--gold), var(--light-green));
+        margin: 1rem auto 0;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Cards Grid */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .card {
+        background: var(--white);
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s;
+        border-top: 4px solid var(--primary-green);
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      .card:nth-child(1) { animation-delay: 0.1s; }
+      .card:nth-child(2) { animation-delay: 0.2s; }
+      .card:nth-child(3) { animation-delay: 0.3s; }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      }
+
+      .card-icon {
+        font-size: 3rem;
+        color: var(--gold);
+        margin-bottom: 1rem;
+      }
+
+      .card h3 {
+        color: var(--primary-green);
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+
+      .card p {
+        color: var(--text-gray);
+        line-height: 1.8;
+      }
+
+      /* Features Section */
+      .features {
+        background-color: var(--light-gray);
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature-item {
+        background: var(--white);
+        padding: 2rem;
+        border-radius: 8px;
+        border-right: 4px solid var(--gold);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      .feature-item:nth-child(1) { animation-delay: 0.1s; }
+      .feature-item:nth-child(2) { animation-delay: 0.2s; }
+      .feature-item:nth-child(3) { animation-delay: 0.3s; }
+      .feature-item:nth-child(4) { animation-delay: 0.4s; }
+
+      .feature-item i {
+        color: var(--light-green);
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature-item h4 {
+        color: var(--primary-green);
+        margin-bottom: 0.5rem;
+      }
+
+      /* Testimonials */
+      .testimonials {
+        background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+      }
+
+      .testimonial-item {
+        background: var(--white);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        margin-bottom: 1.5rem;
+        border-right: 4px solid var(--gold);
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      .testimonial-item:nth-child(1) { animation-delay: 0.1s; }
+      .testimonial-item:nth-child(2) { animation-delay: 0.2s; }
+      .testimonial-item:nth-child(3) { animation-delay: 0.3s; }
+
+      .testimonial-text {
+        color: var(--text-gray);
+        margin-bottom: 1rem;
+        font-style: italic;
+      }
+
+      .testimonial-author {
+        color: var(--primary-green);
+        font-weight: bold;
+      }
+
+      .stars {
+        color: var(--gold);
+        margin-bottom: 0.5rem;
+      }
+
+      /* Forms */
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--primary-green);
+        font-weight: 600;
+      }
+
+      input, textarea, select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid var(--light-gray);
+        border-radius: 8px;
+        font-family: 'Vazirmatn', sans-serif;
+        font-size: 1rem;
+        transition: all 0.3s;
+        background: var(--white);
+      }
+
+      input:focus, textarea:focus, select:focus {
+        outline: none;
+        border-color: var(--primary-green);
+        box-shadow: 0 0 0 3px rgba(30, 126, 95, 0.1);
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      /* Form Container */
+      .form-container {
+        background: linear-gradient(135deg, rgba(30, 126, 95, 0.05) 0%, rgba(45, 158, 127, 0.05) 100%);
+        padding: 2.5rem;
+        border-radius: 12px;
+        border: 2px solid var(--light-green);
+        margin-top: 2rem;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      .form-container h3 {
+        color: var(--primary-green);
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--dark-blue);
+        color: var(--white);
+        padding: 3rem 20px 1rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h4 {
+        color: var(--gold);
+        margin-bottom: 1rem;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-section a {
+        color: var(--white);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-section a:hover {
+        color: var(--gold);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        background: var(--primary-green);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+      }
+
+      .social-links a:hover {
+        background: var(--gold);
+        color: var(--dark-blue);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        color: var(--light-gray);
+      }
+
+      .tagline {
+        color: var(--gold);
+        font-weight: bold;
+        margin-top: 0.5rem;
+      }
+
+      /* Service Cards */
+      .service-card {
+        background: var(--white);
+        border-radius: 10px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        border-right: 5px solid var(--primary-green);
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      .service-card:nth-child(1) { animation-delay: 0.1s; }
+      .service-card:nth-child(2) { animation-delay: 0.2s; }
+
+      .service-card h3 {
+        color: var(--primary-green);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .service-card p {
+        color: var(--text-gray);
+        line-height: 1.8;
+      }
+
+      .service-card ul {
+        margin-top: 1rem;
+        margin-right: 1rem;
+      }
+
+      .service-card li {
+        margin-bottom: 0.5rem;
+        color: var(--text-gray);
+      }
+
+      /* Course/Product Grid */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .product-card {
+        background: var(--white);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s;
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      .product-card:nth-child(1) { animation-delay: 0.1s; }
+      .product-card:nth-child(2) { animation-delay: 0.2s; }
+      .product-card:nth-child(3) { animation-delay: 0.3s; }
+      .product-card:nth-child(4) { animation-delay: 0.4s; }
+      .product-card:nth-child(5) { animation-delay: 0.5s; }
+      .product-card:nth-child(6) { animation-delay: 0.6s; }
+
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      }
+
+      .product-image {
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(135deg, var(--light-green) 0%, var(--light-blue) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: var(--white);
+      }
+
+      .product-info {
+        padding: 1.5rem;
+      }
+
+      .product-info h4 {
+        color: var(--primary-green);
+        margin-bottom: 0.5rem;
+      }
+
+      .product-price {
+        color: var(--gold);
+        font-weight: bold;
+        font-size: 1.3rem;
+        margin: 1rem 0;
+      }
+
+      .product-info p {
+        color: var(--text-gray);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Filters */
+      .filter-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        padding: 8px 20px;
+        border: 2px solid var(--primary-green);
+        background: var(--white);
+        color: var(--primary-green);
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-family: 'Vazirmatn', sans-serif;
+      }
+
+      .filter-btn:hover, .filter-btn.active {
+        background: var(--primary-green);
+        color: var(--white);
+      }
+
+      /* Tabs */
+      .tabs {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid var(--light-gray);
+        flex-wrap: wrap;
+      }
+
+      .tab-btn {
+        padding: 10px 20px;
+        background: none;
+        border: none;
+        border-bottom: 3px solid transparent;
+        color: var(--text-gray);
+        cursor: pointer;
+        font-family: 'Vazirmatn', sans-serif;
+        font-size: 1rem;
+        transition: all 0.3s;
+      }
+
+      .tab-btn.active {
+        color: var(--primary-green);
+        border-bottom-color: var(--gold);
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      /* Alert */
+      .alert {
+        padding: 1rem;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+      }
+
+      .alert-success {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      /* Stats Section */
+      .stats-section {
+        background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-blue) 100%);
+        color: var(--white);
+        padding: 3rem 20px;
+        text-align: center;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .stat-item {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      .stat-item:nth-child(1) { animation-delay: 0.1s; }
+      .stat-item:nth-child(2) { animation-delay: 0.2s; }
+      .stat-item:nth-child(3) { animation-delay: 0.3s; }
+      .stat-item:nth-child(4) { animation-delay: 0.4s; }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--gold);
+      }
+
+      .stat-label {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          right: 0;
+          background: var(--primary-green);
+          flex-direction: column;
+          padding: 1rem;
+          gap: 1rem;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-toggle {
+          display: block;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .cta-buttons .btn {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .whatsapp-float {
+          bottom: 20px;
+          left: 20px;
+          width: 50px;
+          height: 50px;
+        }
+
+        .whatsapp-float i {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" onclick="openWhatsApp()" title="تماس با ما در WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <i class="fas fa-leaf"></i>
+            BasiraHub
+          </div>
+          <button class="nav-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#home" onclick="showPage('home')">خانه</a></li>
+            <li><a href="#services" onclick="showPage('services')">خدمات درمان</a></li>
+            <li><a href="#academy" onclick="showPage('academy')">آکادمی</a></li>
+            <li><a href="#business" onclick="showPage('business')">کسب‌وکار</a></li>
+            <li><a href="#testimonials" onclick="showPage('testimonials')">نظرات</a></li>
+            <li><a href="#contact" onclick="showPage('contact')">تماس</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Home Page -->
+      <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="container">
+            <img style="height: 300px; width: 300px; " src="./bht.png" alt="">
+            <p>جایی برای رشد، آگاهی و موفقیت</p>
+            <div class="cta-buttons">
+              <button class="btn btn-primary" onclick="showPage('academy')">
+                <i class="fas fa-book"></i> مشاهده آموزش‌ها
+              </button>
+              <button class="btn btn-secondary" onclick="showPage('services')">
+                <i class="fas fa-calendar"></i> رزرو مشاوره درمان
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Three Main Pillars -->
+        <section>
+          <div class="container">
+            <h2 class="section-title">سه رکن اصلی BasiraHub</h2>
+            <div class="cards-grid">
+              <div class="card">
+                <div class="card-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <h3>حجامت درمانی</h3>
+                <p>درمان سنتی و علمی با استفاده از بهترین تکنیک‌های حجامت برای بهبود سلامت و رفاه شما</p>
+              </div>
+              <div class="card">
+                <div class="card-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>آموزش تخصصی</h3>
+                <p>دوره‌های جامع و کاربردی در زمینه‌های مختلف برای توسعه مهارت‌های شما</p>
+              </div>
+              <div class="card">
+                <div class="card-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>توسعه کسب‌وکار</h3>
+                <p>راهنمایی و مشاوره برای ایجاد و توسعه کسب‌وکار آنلاین موفق</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        
+
+        <!-- Why BasiraHub -->
+        <section class="features">
+          <div class="container">
+            <h2 class="section-title">چرا BasiraHub؟</h2>
+            <div class="features-grid">
+              <div class="feature-item">
+                <i class="fas fa-lightbulb"></i>
+                <h4>آموزش‌های کاربردی</h4>
+                <p>محتوای آموزشی بر اساس نیازهای بازار و تجربیات واقعی متخصصان</p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-spa"></i>
+                <h4>رویکرد سلامت‌محور</h4>
+                <p>تمرکز بر سلامت جسمانی و روانی شما در تمام خدمات ما</p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-headset"></i>
+                <h4>پشتیبانی مستمر</h4>
+                <p>تیم حمایتی ما همیشه برای کمک و راهنمایی شما آماده است</p>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-rocket"></i>
+                <h4>بستری برای رشد</h4>
+                <p>فرصت‌های نامحدود برای رشد شخصی و حرفه‌ای شما</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Services Page -->
+      <div id="services" class="page">
+        <section>
+          <div class="container">
+            <h2 class="section-title">خدمات درمان و حجامت</h2>
+            
+            <div class="tabs">
+              <button class="tab-btn active" onclick="switchTab('benefits')">فواید حجامت</button>
+              <button class="tab-btn" onclick="switchTab('types')">انواع حجامت</button>
+              <button class="tab-btn" onclick="switchTab('booking')">رزرو نوبت</button>
+            </div>
+
+            <!-- Benefits Tab -->
+            <div id="benefits" class="tab-content active">
+              <div class="service-card">
+                <h3><i class="fas fa-check-circle"></i> فواید حجامت علمی و سنتی</h3>
+                <p>حجامت یکی از قدیمی‌ترین و مؤثرترین روش‌های درمانی است که برای هزاران سال مورد استفاده قرار گرفته است. فواید آن عبارتند از:</p>
+                <ul style="margin-top: 1rem; margin-right: 2rem;">
+                  <li>✓ بهبود گردش خون و تقویت سیستم ایمنی</li>
+                  <li>✓ کاهش درد و التهاب در بدن</li>
+                  <li>✓ درمان سردردهای مزمن و میگرن</li>
+                  <li>✓ بهبود کیفیت خواب و کاهش استرس</li>
+                  <li>✓ تقویت انرژی و حیوانیت بدن</li>
+                  <li>✓ درمان مشکلات پوستی و التهابات</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Types Tab -->
+            <div id="types" class="tab-content">
+              <div class="cards-grid">
+                <div class="service-card">
+                  <h3>حجامت خشک</h3>
+                  <p>استفاده از فنجان‌های خلاء برای تحریک نقاط خاص بدن بدون خونریزی</p>
+                </div>
+                <div class="service-card">
+                  <h3>حجامت تر</h3>
+                  <p>ترکیب حجامت با خونریزی کنترل‌شده برای پاکسازی بدن</p>
+                </div>
+                <div class="service-card">
+                  <h3>حجامت نقطه‌ای</h3>
+                  <p>تمرکز بر نقاط خاص بدن برای درمان مشکلات خاص</p>
+                </div>
+                <div class="service-card">
+                  <h3>حجامت ورزشی</h3>
+                  <p>برای ورزشکاران و افرادی که نیاز به بهبود عملکرد دارند</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Booking Tab -->
+            <div id="booking" class="tab-content">
+              <div class="form-container">
+                <h3><i class="fas fa-calendar-check"></i> رزرو نوبت مشاوره و درمان</h3>
+                <form onsubmit="handleBooking(event)">
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <div class="form-group">
+                      <label>نام و نام خانوادگی *</label>
+                      <input type="text" required placeholder="نام کامل خود را وارد کنید">
+                    </div>
+                    <div class="form-group">
+                      <label>شماره تلفن *</label>
+                      <input type="tel" required placeholder="07xxxxxxxx">
+                    </div>
+                    <div class="form-group">
+                      <label>ایمیل</label>
+                      <input type="email" placeholder="ایمیل خود را وارد کنید">
+                    </div>
+                    <div class="form-group">
+                      <label>تاریخ مورد نظر *</label>
+                      <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                      <label>نوع خدمت *</label>
+                      <select required>
+                        <option value="">انتخاب کنید</option>
+                        <option value="dry">حجامت خشک</option>
+                        <option value="wet">حجامت تر</option>
+                        <option value="point">حجامت نقطه‌ای</option>
+                        <option value="sports">حجامت ورزشی</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>ساعت مورد نظر *</label>
+                      <input type="time" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>توضیحات و نیازهای خاص</label>
+                    <textarea placeholder="لطفاً هر مشکل یا نیاز خاصی را شرح دهید..."></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">
+                    <i class="fas fa-check"></i> تأیید رزرو
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Academy Page -->
+      <div id="academy" class="page">
+        <section>
+          <div class="container">
+            <h2 class="section-title">آکادمی و آموزش</h2>
+            
+            <div class="filter-buttons">
+              <button class="filter-btn active" onclick="filterProducts('all')">همه</button>
+              <button class="filter-btn" onclick="filterProducts('course')">دوره‌ها</button>
+              <button class="filter-btn" onclick="filterProducts('book')">کتاب‌ها</button>
+              <button class="filter-btn" onclick="filterProducts('article')">مقالات</button>
+              <button class="filter-btn" onclick="filterProducts('file')">فایل‌ها</button>
+            </div>
+
+            <div class="products-grid">
+              <div class="product-card" data-category="course">
+                <div class="product-image">
+                  <i class="fas fa-video"></i>
+                </div>
+                <div class="product-info">
+                  <h4>دوره حجامت حرفه‌ای</h4>
+                  <p>آموزش جامع تکنیک‌های حجامت از سطح مبتدی تا پیشرفته</p>
+                  <div class="product-price">۲۵۰۰ افغانی</div>
+                  <button class="btn btn-primary" style="width: 100%;">خرید</button>
+                </div>
+              </div>
+
+              <div class="product-card" data-category="course">
+                <div class="product-image">
+                  <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="product-info">
+                  <h4>دوره کسب‌وکار دیجیتال</h4>
+                  <p>راهنمای کامل برای شروع و رشد کسب‌وکار آنلاین</p>
+                  <div class="product-price">۳۵۰۰ افغانی</div>
+                  <button class="btn btn-primary" style="width: 100%;">خرید</button>
+                </div>
+              </div>
+
+              <div class="product-card" data-category="book">
+                <div class="product-image">
+                  <i class="fas fa-book"></i>
+                </div>
+                <div class="product-info">
+                  <h4>کتاب الکترونیکی سلامت</h4>
+                  <p>راهنمای جامع برای حفظ و بهبود سلامت</p>
+                  <div class="product-price">۱۲۰۰ افغانی</div>
+                  <button class="btn btn-primary" style="width: 100%;">دانلود</button>
+                </div>
+              </div>
+
+              <div class="product-card" data-category="article">
+                <div class="product-image">
+                  <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="product-info">
+                  <h4>مقالات تخصصی</h4>
+                  <p>مجموعه مقالات درباره حجامت و سلامت</p>
+                  <div class="product-price">رایگان</div>
+                  <button class="btn btn-primary" style="width: 100%;">مطالعه</button>
+                </div>
+              </div>
+
+              <div class="product-card" data-category="file">
+                <div class="product-image">
+                  <i class="fas fa-file-pdf"></i>
+                </div>
+                <div class="product-info">
+                  <h4>فایل‌های کاربردی</h4>
+                  <p>الگوهای کسب‌وکار و فرم‌های مفید</p>
+                  <div class="product-price">۸۵۰ افغانی</div>
+                  <button class="btn btn-primary" style="width: 100%;">دانلود</button>
+                </div>
+              </div>
+
+              <div class="product-card" data-category="course">
+                <div class="product-image">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <div class="product-info">
+                  <h4>دوره توسعه مهارت‌های نرم</h4>
+                  <p>بهبود مهارت‌های ارتباطی و رهبری</p>
+                  <div class="product-price">۲۲۰۰ افغانی</div>
+                  <button class="btn btn-primary" style="width: 100%;">خرید</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Business Page -->
+      <div id="business" class="page">
+        <section>
+          <div class="container">
+            <h2 class="section-title">توسعه کسب‌وکار آنلاین</h2>
+            
+            <div class="cards-grid">
+              <div class="service-card">
+                <h3><i class="fas fa-laptop"></i> مهارت‌های دیجیتال</h3>
+                <p>آموزش ابزار‌های دیجیتال مدرن برای توسعه کسب‌وکار آنلاین شامل:</p>
+                <ul style="margin-top: 1rem; margin-right: 1rem;">
+                  <li>• بازاریابی دیجیتال و شبکه‌های اجتماعی</li>
+                  <li>• طراحی وب‌سایت و فروشگاه آنلاین</li>
+                  <li>• مدیریت محتوا و SEO</li>
+                  <li>• تحلیل داده‌ها و متریک‌های کسب‌وکار</li>
+                </ul>
+              </div>
+
+              <div class="service-card">
+                <h3><i class="fas fa-users"></i> توسعه تیمی</h3>
+                <p>برنامه‌های جامع برای ایجاد و توسعه تیم‌های کاری موثر:</p>
+                <ul style="margin-top: 1rem; margin-right: 1rem;">
+                  <li>• مهارت‌های رهبری و مدیریت</li>
+                  <li>• ارتباطات موثر در تیم</li>
+                  <li>• حل مسائل و تصمیم‌گیری</li>
+                  <li>• بهبود بهره‌وری و انگیزه</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="form-container">
+              <h3><i class="fas fa-handshake"></i> درخواست مشاوره بیزینسی</h3>
+              <form onsubmit="handleConsultation(event)">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                  <div class="form-group">
+                    <label>نام شرکت/کسب‌وکار *</label>
+                    <input type="text" required placeholder="نام کسب‌وکار خود را وارد کنید">
+                  </div>
+                  <div class="form-group">
+                    <label>نام مالک/مدیر *</label>
+                    <input type="text" required placeholder="نام کامل">
+                  </div>
+                  <div class="form-group">
+                    <label>شماره تلفن *</label>
+                    <input type="tel" required placeholder="07xxxxxxxxx">
+                  </div>
+                  <div class="form-group">
+                    <label>ایمیل *</label>
+                    <input type="email" required placeholder="ایمیل خود را وارد کنید">
+                  </div>
+                  <div class="form-group">
+                    <label>نوع کسب‌وکار *</label>
+                    <select required>
+                      <option value="">انتخاب کنید</option>
+                      <option value="online">کسب‌وکار آنلاین</option>
+                      <option value="offline">کسب‌وکار آفلاین</option>
+                      <option value="hybrid">ترکیبی</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>تعداد کارمندان</label>
+                    <input type="number" min="0" placeholder="تعداد کارمندان">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>توضیح مختصر درباره کسب‌وکار و نیازهای شما *</label>
+                  <textarea required placeholder="لطفاً کسب‌وکار خود و چالش‌های فعلی را شرح دهید..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">
+                  <i class="fas fa-paper-plane"></i> ارسال درخواست
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Testimonials Page -->
+      <div id="testimonials" class="page">
+        <section class="testimonials">
+          <div class="container">
+            <h2 class="section-title">نظرات و تجربیات کاربران</h2>
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"BasiraHub یک تجربه فوق‌العاده برای من بود. دوره‌های آموزشی بسیار کاربردی و تیم پشتیبانی بسیار حرفه‌ای است. توصیه می‌کنم به همه!"</p>
+              <p class="testimonial-author">- فاطمه محمدی</p>
+            </div>
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"خدمات درمانی و حجامت در BasiraHub بسیار مؤثر و ایمن بود. متخصصان بسیار مجرب و دقیق هستند. سپاسگزار!"</p>
+              <p class="testimonial-author">- علی رضایی</p>
+            </div>
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"مشاوره کسب‌وکار آنلاین من را کمک کرد تا کسب‌وکار خود را به سطح جدیدی ببرم. نتایج فوری و قابل‌ملاحظه بود!"</p>
+              <p class="testimonial-author">- محمد حسن</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Contact Page -->
+      <div id="contact" class="page">
+        <section>
+          <div class="container">
+            <h2 class="section-title">تماس و درباره ما</h2>
+            
+            <div class="cards-grid" style="margin-bottom: 3rem;">
+              <div class="card">
+                <div class="card-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <h3>تلفن</h3>
+                <p style=" direction: ltr;">(+93)79 354 8744</p>
+              </div>
+              <div class="card">
+                <div class="card-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <h3>ایمیل</h3>
+                <p>info@basirahub.com</p>
+              </div>
+              <div class="card">
+                <div class="card-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>آدرس</h3>
+                <p>مزار شریف ,  .......</p>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+              <div>
+                <h3 style="color: var(--primary-green); margin-bottom: 1rem;">درباره BasiraHub</h3>
+                <p style="color: var(--text-gray); line-height: 1.8;">
+                  BasiraHub یک پلتفرم جامع و مدرن است که با هدف ارائه خدمات بهداشتی، آموزشی و کسب‌وکاری تأسیس شده است. ما باور داریم که هر فرد می‌تواند با دسترسی به آموزش مناسب و خدمات کیفی، به موفقیت و سلامت دست یابد.
+                </p>
+                <p style="color: var(--text-gray); line-height: 1.8; margin-top: 1rem;">
+                  تیم ما متشکل از متخصصان با تجربه در زمینه‌های حجامت، آموزش و کسب‌وکار است که با تمام دل و جان برای رضایت و پیشرفت شما کار می‌کند.
+                </p>
+              </div>
+
+              <div>
+                <h3 style="color: var(--primary-green); margin-bottom: 1rem;">فرم تماس</h3>
+                <form onsubmit="handleContact(event)">
+                  <div class="form-group">
+                    <label>نام *</label>
+                    <input type="text" required placeholder="نام خود را وارد کنید">
+                  </div>
+                  <div class="form-group">
+                    <label>ایمیل *</label>
+                    <input type="email" required placeholder="ایمیل خود را وارد کنید">
+                  </div>
+                  <div class="form-group">
+                    <label>موضوع *</label>
+                    <input type="text" required placeholder="موضوع پیام">
+                  </div>
+                  <div class="form-group">
+                    <label>پیام *</label>
+                    <textarea required placeholder="پیام خود را بنویسید..."></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">
+                    <i class="fas fa-paper-plane"></i> ارسال پیام
+                  </button>
+                </form>
+              </div>
+            </div>
+
+           
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4><i class="fas fa-leaf"></i> BasiraHub</h4>
+            <p>جایی برای رشد، آگاهی و موفقیت</p>
+            <p style="font-size: 0.9rem; margin-top: 1rem; color: var(--light-gray);">
+              ما متعهد به ارائه بهترین خدمات در زمینه سلامت، آموزش و کسب‌وکار هستیم.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>دسترسی سریع</h4>
+            <ul>
+              <li><a href="#home" onclick="showPage('home')">خانه</a></li>
+              <li><a href="#services" onclick="showPage('services')">خدمات درمان</a></li>
+              <li><a href="#academy" onclick="showPage('academy')">آکادمی</a></li>
+              <li><a href="#business" onclick="showPage('business')">کسب‌وکار</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>خدمات</h4>
+            <ul>
+              <li><a href="#services" onclick="showPage('services')">حجامت درمانی</a></li>
+              <li><a href="#academy" onclick="showPage('academy')">دوره‌های آموزشی</a></li>
+              <li><a href="#business" onclick="showPage('business')">مشاوره کسب‌وکار</a></li>
+              <li><a href="#testimonials" onclick="showPage('testimonials')">نظرات کاربران</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>تماس</h4>
+            <p style="direction: ltr; text-align: right;"><i style="text-align: right;" class="fas fa-phone"></i>(+93)79 354 8744</p>
+            <p><i class="fas fa-envelope"></i> info@basirahub.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> مزارشریف </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 1405 BasiraHub. تمام حقوق محفوظ است.</p>
+          <p class="tagline">BasiraHub – جایی برای رشد، آگاهی و موفقیت</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Scroll Animation Observer
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+          }
+        });
+      }, observerOptions);
+
+      // Page Navigation
+      function showPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.classList.remove('active'));
+        document.getElementById(pageId).classList.add('active');
+        window.scrollTo(0, 0);
+        document.getElementById('navLinks').classList.remove('active');
+      }
+
+      // Mobile Menu Toggle
+      function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('active');
+      }
+
+      // Tab Switching
+      function switchTab(tabName) {
+        const tabs = document.querySelectorAll('.tab-content');
+        const buttons = document.querySelectorAll('.tab-btn');
+        
+        tabs.forEach(tab => tab.classList.remove('active'));
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        document.getElementById(tabName).classList.add('active');
+        event.target.classList.add('active');
+      }
+
+      // Product Filter
+      function filterProducts(category) {
+        const products = document.querySelectorAll('.product-card');
+        const buttons = document.querySelectorAll('.filter-btn');
+        
+        buttons.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        
+        products.forEach(product => {
+          if (category === 'all' || product.dataset.category === category) {
+            product.style.display = 'block';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      }
+
+      // WhatsApp Open
+      function openWhatsApp() {
+        const phoneNumber = '93793548744'; // شماره WhatsApp
+        const message = 'سلام! من می‌خواهم درباره خدمات BasiraHub اطلاعات بیشتری کسب کنم.';
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+      }
+
+       // Form Handlers
+      function handleBooking(e) {
+        e.preventDefault();
+        alert('✓ درخواست رزرو شما با موفقیت ثبت شد.\nما به زودی با شما تماس خواهیم گرفت.');
+        e.target.reset();
+      }
+
+      function handleConsultation(e) {
+        e.preventDefault();
+        alert('✓ درخواست مشاوره شما ثبت شد.\nتیم ما در اسرع وقت با شما تماس خواهد گرفت.');
+        e.target.reset();
+      }
+
+      function handleContact(e) {
+        e.preventDefault();
+        alert('✓ پیام شما با موفقیت ارسال شد.\nما در اسرع وقت به شما پاسخ خواهیم داد.');
+        e.target.reset();
+      }
+
+      // Add page active class on load
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('home').classList.add('active');
+      });
+    </script>
+  </body>
+  </html>
