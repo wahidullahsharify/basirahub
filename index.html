@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -1235,8 +1236,20 @@
       font-weight: 700;
     }
 
-    /* Responsive */
+    /* ===== RESPONSIVE MOBILE: scale down all elements by ~15% ===== */
     @media (max-width: 768px) {
+      /* base scaling */
+      html {
+        font-size: 85%; /* 15% smaller than default (16px -> 13.6px) */
+      }
+
+      /* containers, grids, cards, etc. will adapt automatically via rem/em */
+      /* but we also adjust some specific paddings/margins for better flow */
+
+      .container {
+        padding: 0 12px;
+      }
+
       .nav-links {
         display: none;
         position: absolute;
@@ -1245,8 +1258,8 @@
         right: 0;
         background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
         flex-direction: column;
-        padding: 1.2rem;
-        gap: 0.8rem;
+        padding: 1rem;
+        gap: 0.6rem;
         border-bottom: 1.6px solid var(--gold);
         box-shadow: 0 6.4px 20px rgba(43, 122, 61, 0.2);
       }
@@ -1260,20 +1273,20 @@
       }
 
       .hero {
-        padding: 64px 16px 48px;
+        padding: 48px 12px 36px;
       }
 
       .hero h1 {
-        font-size: 1.76rem;
+        font-size: 1.8rem;
       }
 
       .hero p {
-        font-size: 0.88rem;
+        font-size: 0.9rem;
       }
 
       .hero img {
-        height: 176px;
-        width: 176px;
+        height: 160px;
+        width: 160px;
       }
 
       .cta-buttons {
@@ -1283,32 +1296,34 @@
 
       .cta-buttons .btn {
         width: 100%;
-        max-width: 280px;
+        max-width: 220px;
+        font-size: 0.7rem;
+        padding: 10px 20px;
       }
 
       .cards-grid {
         grid-template-columns: 1fr;
-        gap: 1.6rem;
+        gap: 1.2rem;
       }
 
       .section-title {
-        font-size: 1.6rem;
-        margin-bottom: 2rem;
+        font-size: 1.4rem;
+        margin-bottom: 1.6rem;
       }
 
       .whatsapp-float {
-        bottom: 16px;
-        left: 16px;
-        width: 44px;
-        height: 44px;
+        bottom: 12px;
+        left: 12px;
+        width: 38px;
+        height: 38px;
       }
 
       .whatsapp-float i {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       .bio-content {
-        padding: 1.6rem;
+        padding: 1.2rem;
       }
 
       .bio-content p {
@@ -1316,38 +1331,202 @@
       }
 
       .form-container {
-        padding: 1.6rem;
+        padding: 1.2rem;
       }
 
       section {
-        padding: 48px 16px;
+        padding: 32px 12px;
       }
 
       .features-grid {
         grid-template-columns: 1fr;
+        gap: 1.2rem;
       }
 
       .footer-content {
-        gap: 1.6rem;
+        gap: 1.2rem;
+        grid-template-columns: 1fr 1fr;
       }
 
       .products-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
       }
 
       .tabs {
-        gap: 0.4rem;
+        gap: 0.3rem;
       }
 
       .tab-btn {
-        padding: 8px 12.8px;
-        font-size: 0.72rem;
+        padding: 6px 10px;
+        font-size: 0.65rem;
+      }
+
+      .card {
+        padding: 1.2rem;
+      }
+
+      .card-icon {
+        font-size: 2rem;
+      }
+
+      .card h3 {
+        font-size: 0.9rem;
+      }
+
+      .card p {
+        font-size: 0.65rem;
+      }
+
+      .feature-item {
+        padding: 1.2rem;
+      }
+
+      .feature-item i {
+        font-size: 1.6rem;
+      }
+
+      .feature-item h4 {
+        font-size: 0.8rem;
+      }
+
+      .feature-item p {
+        font-size: 0.65rem;
+      }
+
+      .testimonial-item {
+        padding: 1.2rem;
+      }
+
+      .testimonial-text {
+        font-size: 0.7rem;
+      }
+
+      .testimonial-author {
+        font-size: 0.7rem;
+      }
+
+      .service-card {
+        padding: 1.2rem;
+      }
+
+      .service-card h3 {
+        font-size: 1rem;
+      }
+
+      .service-card p {
+        font-size: 0.65rem;
+      }
+
+      .service-card li {
+        font-size: 0.65rem;
+      }
+
+      .product-card {
+        border-radius: 8px;
+      }
+
+      .product-image {
+        height: 120px;
+        font-size: 2rem;
+      }
+
+      .product-info {
+        padding: 1rem;
+      }
+
+      .product-info h4 {
+        font-size: 0.8rem;
+      }
+
+      .product-price {
+        font-size: 0.9rem;
+      }
+
+      .product-info p {
+        font-size: 0.6rem;
+      }
+
+      .filter-btn {
+        padding: 6px 14px;
+        font-size: 0.65rem;
+      }
+
+      .form-container h3 {
+        font-size: 1rem;
+      }
+
+      label {
+        font-size: 0.65rem;
+      }
+
+      input, textarea, select {
+        padding: 8px 10px;
+        font-size: 0.65rem;
+      }
+
+      .btn {
+        padding: 8px 18px;
+        font-size: 0.7rem;
+      }
+
+      .footer-section h4 {
+        font-size: 0.8rem;
+      }
+
+      .footer-section a {
+        font-size: 0.65rem;
+      }
+
+      .footer-section p {
+        font-size: 0.65rem;
+      }
+
+      .social-links a {
+        width: 30px;
+        height: 30px;
+        font-size: 0.65rem;
+      }
+
+      .footer-bottom {
+        font-size: 0.65rem;
+      }
+
+      .tagline {
+        font-size: 0.7rem;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      .nav-links a {
+        font-size: 0.7rem;
+        padding: 6px 8px;
+      }
+
+      .btn-login {
+        padding: 5px 10px;
+        font-size: 0.65rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .stat-number {
+        font-size: 1.6rem;
+      }
+
+      .stat-label {
+        font-size: 0.65rem;
       }
     }
 
     @media (max-width: 480px) {
       .hero h1 {
-        font-size: 1.44rem;
+        font-size: 1.4rem;
       }
 
       .hero p {
@@ -1355,21 +1534,21 @@
       }
 
       .hero img {
-        height: 144px;
-        width: 144px;
+        height: 120px;
+        width: 120px;
       }
 
       .section-title {
-        font-size: 1.28rem;
+        font-size: 1.2rem;
       }
 
       .card {
-        padding: 1.2rem;
+        padding: 1rem;
       }
 
       .btn {
-        padding: 9.6px 20px;
-        font-size: 0.72rem;
+        padding: 6px 14px;
+        font-size: 0.6rem;
       }
 
       .nav-links {
@@ -1377,7 +1556,15 @@
       }
 
       .logo {
-        font-size: 1.12rem;
+        font-size: 1rem;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -1444,7 +1631,7 @@
       <!-- Hero Section -->
       <section class="hero">
         <div class="container">
-          <h1><img style="height: 250px; width: 250px;" src="./image/logo_white.png" alt="BasiraHub Logo"></h1>
+          <h1><img style="height: 250px; width: 250px;" src="./image/logo_trans.png" alt="BasiraHub Logo"></h1>
           <p>جایی برای رشد، آگاهی و موفقیت</p>
           <div class="cta-buttons">
             <button class="btn btn-primary" onclick="showPage('academy')">
@@ -1964,7 +2151,7 @@
         </div>
         <div class="footer-section">
           <h4>تماس</h4>
-          <p style="direction: ltr; text-align: right; margin-bottom: 0.8rem;"> (+93) 79 354 8744  <i class="fas fa-phone" style="margin-left: 0.5rem;"></i></p>
+          <p style="direction: ltr; text-align: right; margin-bottom: 0.8rem;"><i class="fas fa-phone" style="margin-left: 0.5rem;"></i> (+93) 79 354 8744</p>
           <p style="margin-bottom: 0.8rem;"><i class="fas fa-envelope" style="margin-left: 0.5rem;"></i> info@basirahub.com</p>
           <p style="margin-bottom: 1.5rem;"><i class="fas fa-map-marker-alt" style="margin-left: 0.5rem;"></i> مزار شریف، افغانستان</p>
           <div class="social-links">
@@ -2114,3 +2301,4 @@
   </script>
 </body>
 </html>
+```
